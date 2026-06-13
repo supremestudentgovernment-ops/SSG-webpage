@@ -155,30 +155,18 @@ body.dark .card{
     text-align:center;
 }
 
-.avatar{
-    width:120px;
-    height:120px;
-    border-radius:50%;
-    background:#ddd;
-    margin:auto;
-    margin-bottom:15px;
+.avatar {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 15px;
+    overflow: hidden;
+    border-radius: 50%;
 }
 
-.profile-container {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%; /* Makes the container a circle */
-    overflow: hidden;   /* Hides the corner edges of a square image */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 3px solid #ccc; /* Optional: Adds a border around the profile */
-}
-
-.profile-container img {
+.avatar img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Prevents the image from stretching or distorting */
+    object-fit: cover;
 }
 
 .announcement{
@@ -344,8 +332,8 @@ Service, and Excellence.
 </div>
 
 <div class="card officer">
-<div class="profile container">
-    <img src="678344532_1292578402266460_6364888769880874431_n.jpg" alt="User Profile Picture">
+<div class="avatar">
+    <img src="678344532_1292578402266460_6364888769880874431_n.jpg" alt="James Dyne P. Maloloy-on">
 </div>
 <h3>Vice President External</h3>
 <p>James Dyne P. Maloloy-on</p>
