@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SSG - St. John Paul II College of Davao</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --primary:#002147;
+    --secondary:#f7c600;
+    --light:#ffffff;
+    --dark:#121212;
+    --gray:#f4f4f4;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:var(--gray);
+    color:#333;
+}
+
+body.dark{
+    background:#181818;
+    color:white;
+}
+
+header{
+    background:var(--primary);
+    color:white;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.navbar{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px;
+}
+
+.logo{
+    font-size:1.2rem;
+    font-weight:700;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:20px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-weight:500;
+}
+
+.toggle-btn{
+    background:var(--secondary);
+    border:none;
+    padding:8px 12px;
+    cursor:pointer;
+    border-radius:5px;
+    font-weight:bold;
+}
+
+.hero{
+    height:90vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+    background:
+    linear-gradient(rgba(0,33,71,.7),rgba(0,33,71,.7)),
+    url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1600&q=80');
+    background-size:cover;
+    background-position:center;
+}
+
+.hero h1{
+    font-size:3rem;
+}
+
+.hero p{
+    margin:15px 0;
+    font-size:1.2rem;
+}
+
+.btn{
+    display:inline-block;
+    background:var(--secondary);
+    color:#000;
+    text-decoration:none;
+    padding:12px 25px;
+    border-radius:30px;
+    font-weight:600;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    padding:70px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+    color:var(--primary);
+}
+
+body.dark .section-title{
+    color:var(--secondary);
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 4px 10px rgba(0,0,0,.1);
+}
+
+body.dark .card{
+    background:#242424;
+}
+
+.card h3{
+    margin-bottom:10px;
+}
+
+.officer{
+    text-align:center;
+}
+
+.avatar{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    background:#ddd;
+    margin:auto;
+    margin-bottom:15px;
+}
+
+.announcement{
+    border-left:5px solid var(--secondary);
+}
+
+.events li{
+    margin:10px 0;
+}
+
+.contact-form{
+    max-width:700px;
+    margin:auto;
+}
+
+input, textarea{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
+
+button.submit{
+    background:var(--primary);
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+footer{
+    background:var(--primary);
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+@media(max-width:768px){
+    .navbar{
+        flex-direction:column;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+        margin-top:10px;
+    }
+
+    .hero h1{
+        font-size:2rem;
+    }
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="navbar">
+<div class="logo">
+🎓 SSG - Senior High School
+</div>
+
+<nav>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#officers">Officers</a></li>
+<li><a href="#events">Events</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<button class="toggle-btn" onclick="toggleDarkMode()">
+🌙 Mode
+</button>
+</div>
+</header>
+
+<section class="hero" id="home">
+<div>
+<h1>Supreme Student Government</h1>
+<p>St. John Paul II College of Davao - Senior High School</p>
+<a href="#about" class="btn">Explore</a>
+</div>
+</section>
+
+<section id="about">
+<div class="container">
+<h2 class="section-title">About the SSG</h2>
+
+<div class="grid">
+<div class="card">
+<h3>Mission</h3>
+<p>
+To serve as the voice of the students,
+promote leadership, and create meaningful
+programs for the school community.
+</p>
+</div>
+
+<div class="card">
+<h3>Vision</h3>
+<p>
+An empowered student body committed to
+academic excellence, service, and leadership.
+</p>
+</div>
+
+<div class="card">
+<h3>Core Values</h3>
+<p>
+Leadership, Integrity, Respect,
+Service, and Excellence.
+</p>
+</div>
+</div>
+</div>
+</section>
+
+</div>
+</div>
+</section>
+
+<section id="officers">
+<div class="container">
+<h2 class="section-title">SSG Moderator</h2>
+
+<div class="grid">
+
+<div class="card officer">
+<div class="avatar"></div>
+<h3>Moderator</h3>
+<p>Pitch</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="officers">
+<div class="container">
+<h2 class="section-title">SSG Officers</h2>
+
+<div class="grid">
+
+<div class="card officer">
+<div class="avatar"></div>
+<h3>President</h3>
+<p>Jan Kyle Estarija</p>
+</div>
+
+<div class="card officer">
+<div class="avatar"></div>
+<h3>Vice President Internal</h3>
+<p>Clark Cervantes</p>
+</div>
+
+<div class="card officer">
+<div class="avatar"></div>
+<h3>Vice President External</h3>
+<p>James Maloloy-on</p>
+</div>
+
+<div class="card officer">
+<div class="avatar"></div>
+<h3>Secretary</h3>
+<p>Insert Name</p>
+</div>
+
+<div class="card officer">
+<div class="avatar"></div>
+<h3>Treasurer</h3>
+<p>Eunice De Leon</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<h2 class="section-title">Announcements</h2>
+
+<div class="card announcement">
+<h3>Community Outreach: HELP</h3>
+<p>
+An initiative to help the persons who were affected by
+the 7.8 earthquake.
+</p>
+</div>
+
+<br>
+
+<div class="card announcement">
+<h3>School Opening Ceremony</h3>
+<p>
+Opening Ceremony of the School Year 2026-2027.
+</p>
+</div>
+</div>
+</section>
+
+<section id="events">
+<div class="container">
+<h2 class="section-title">Upcoming Events</h2>
+
+<div class="card">
+<ul class="events">
+<li>📅 Leadership Training</li>
+<li>📅 School Foundation Day</li>
+<li>📅 Community Outreach</li>
+<li>📅 Intramurals</li>
+<li>📅 Wellness Week</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section id="contact">
+<div class="container">
+<h2 class="section-title">Contact Us</h2>
+
+<form class="contact-form" id="contactForm">
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email" required>
+<textarea rows="5" placeholder="Your Message" required></textarea>
+
+<button type="submit" class="submit">
+Send Message
+</button>
+</form>
+</div>
+</section>
+
+<footer>
+<p>
+© 2026 Supreme Student Government<br>
+St. John Paul II College of Davao - Senior High School
+</p>
+</footer>
+
+<script>
+function toggleDarkMode(){
+    document.body.classList.toggle('dark');
+}
+
+document.getElementById('contactForm')
+.addEventListener('submit', function(e){
+    e.preventDefault();
+
+    alert(
+        'Thank you for contacting the Supreme Student Government. Your message has been recorded.'
+    );
+
+    this.reset();
+});
+</script>
+
+</body>
+</html>
