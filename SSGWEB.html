@@ -185,13 +185,18 @@ input, textarea{
     border-radius:8px;
 }
 
-button.submit{
-    background:var(--primary);
-    color:white;
-    border:none;
-    padding:12px 20px;
-    border-radius:8px;
-    cursor:pointer;
+.button-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none; /* Removes the text underline */
+  border-radius: 5px;
+  text-align: center;
+}
+
+.button-link:hover {
+  background-color: #0056b3; /* Darkens the button on hover */
 }
 
 footer{
@@ -399,6 +404,12 @@ Service, and Excellence.
 <p>Mara Allyha M. Basas</p>
 </div>
 
+<div class="card officer">
+<div class="avatar"></div>
+<h3>Grade 11 Representative</h3>
+<p>N/A</p>
+</div>
+
 </div>
 </div>
 </section>
@@ -432,11 +443,8 @@ Opening Ceremony of the School Year 2026-2027.
 
 <div class="card">
 <ul class="events">
-<li>📅 Leadership Training</li>
-<li>📅 School Foundation Day</li>
-<li>📅 Community Outreach</li>
-<li>📅 Intramurals</li>
-<li>📅 Wellness Week</li>
+<li>📅 Opening Ceremony (June 15, 2026)</li>
+<li>📅 Community Outreach (June 16-19, 2026)</li>
 </ul>
 </div>
 </div>
@@ -446,15 +454,7 @@ Opening Ceremony of the School Year 2026-2027.
 <div class="container">
 <h2 class="section-title">Contact Us</h2>
 
-<form class="contact-form" id="contactForm">
-<input type="text" placeholder="Your Name" required>
-<input type="email" placeholder="Your Email" required>
-<textarea rows="5" placeholder="Your Message" required></textarea>
-
-<button type="submit" class="submit">
-Send Message
-</button>
-</form>
+<a href="https://www.youtube.com" class="button-link">HereKen</a>
 </div>
 </section>
 
